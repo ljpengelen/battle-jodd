@@ -13,6 +13,9 @@ dependencies {
 	compile             'org.jodd:jodd-joy:3.6.6'
 	providedCompile		'javax.servlet:javax.servlet-api:3.0.1'
 	providedRuntime		'javax.servlet.jsp:jsp-api:2.2'
+	// https://mvnrepository.com/artifact/org.apache.derby/derby
+	compile group: 'org.apache.derby', name: 'derby', version: '10.13.1.1'
+
 }
 
 task wrapper(type: Wrapper) {

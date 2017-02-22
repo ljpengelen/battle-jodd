@@ -7,4 +7,4 @@
 # routes definitions
 
 /index.html 			@cqa.IndexAction#view
-/book/(id)		GET		@cqa.BookAction#get			/book
+/book/(id)		GET		@cqa.MicroPostAction#get			/book

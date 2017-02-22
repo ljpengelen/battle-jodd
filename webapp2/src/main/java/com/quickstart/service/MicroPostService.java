@@ -1,5 +1,6 @@
 package com.quickstart.service;
 
+import com.quickstart.AppDbSession;
 import com.quickstart.model.MicroPost;
 import jodd.joy.db.AppDao;
 import jodd.petite.meta.PetiteBean;
@@ -16,6 +17,9 @@ public class MicroPostService {
     @PetiteInject
     AppDao appDao;
 
+    @PetiteInject
+    AppDbSession appDbSession;
+
     public List<MicroPost> findAllMicroPosts() {
         return appDao.listAll(MicroPost.class);
     }
@@ -24,4 +28,9 @@ public class MicroPostService {
         appDao.save(microPost);
     }
 
+    public void storeUser(MicroPost microPost) {
+        appDbSession.start();
+        appDao.store(microPost);
+        appDbSession.stop();
+    }
 }

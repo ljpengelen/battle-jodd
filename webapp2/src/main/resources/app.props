@@ -1,5 +1,14 @@
-# empty parameters will not be ignored (default)
-requestScopeInjector.ignoreEmptyRequestParams=false
+# database
+    jdbc.driverClassName=org.apache.derby.jdbc.EmbeddedDriver
+    jdbc.url=jdbc:derby:joddexample
+    jdbc.username=
+    jdbc.password=
 
-# empty parameters will be threaded as nulls
-requestScopeInjector.treatEmptyParamsAsNull=true
+    # db pool
+    dbpool.driver=${jdbc.driverClassName}
+    dbpool.url=${jdbc.url}
+    dbpool.user=${jdbc.user}
+    dbpool.password=${jdbc.password}
+    dbpool.maxConnections=50
+    dbpool.minConnections=5
+    dbpool.waitIfBusy=true
