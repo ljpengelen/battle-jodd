@@ -1,0 +1,10 @@
+
+# just a simple variable to save some space :)
+
+@cqa = com.quickstart.actions
+
+
+# routes definitions
+
+/index.html 			@cqa.IndexAction#view
+/book/(id)		GET		@cqa.BookAction#get			/book

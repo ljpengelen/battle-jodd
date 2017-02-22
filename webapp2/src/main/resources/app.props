@@ -1,0 +1,5 @@
+# empty parameters will not be ignored (default)
+requestScopeInjector.ignoreEmptyRequestParams=false
+
+# empty parameters will be threaded as nulls
+requestScopeInjector.treatEmptyParamsAsNull=true
